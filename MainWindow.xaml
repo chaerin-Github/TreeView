@@ -1,0 +1,40 @@
+﻿<Window
+    x:Class="Tree.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Tree"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <StackPanel x:Name="myStackPanel" Orientation="Vertical" HorizontalAlignment="Left" >
+
+        <Button x:Name="myButton" Content="TreeView" Click="myButton_Click"/>
+
+        <TreeView x:Name="myTreeView" SelectionMode="Multiple">
+            <TreeView.RootNodes>
+                <TreeViewNode Content="Work Documents">
+                    <TreeViewNode.Children>
+                        <TreeViewNode Content="XYZ Functional Spec" />
+                        <TreeViewNode Content="Feature Schedule" />
+                        <TreeViewNode Content="Overall Project plan" />
+                        <TreeViewNode Content="Feature Resources Allocation" />
+                    </TreeViewNode.Children>
+                </TreeViewNode>
+
+                <TreeViewNode Content="Personal Documents">
+                    <TreeViewNode.Children>
+                        <TreeViewNode Content="Home Remodel">
+                            <TreeViewNode.Children>
+                                <TreeViewNode Content="Contractor Contact Info" />
+                                <TreeViewNode Content="Paint Color Scheme" />
+                                <TreeViewNode Content="Flooring woodgrain type" />
+                                <TreeViewNode Content="Kitchen cabinet style" />
+                            </TreeViewNode.Children>
+                        </TreeViewNode>
+                    </TreeViewNode.Children>
+                </TreeViewNode>
+            </TreeView.RootNodes>
+        </TreeView>
+    </StackPanel>
+</Window>
